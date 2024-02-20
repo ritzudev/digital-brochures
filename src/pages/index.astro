@@ -1,0 +1,110 @@
+---
+import Layout from '../layouts/Layout.astro'
+import VerifiedIcon from '../components/icons/Verified.astro'
+import ImageBlur from '../components/ImageBlur.astro'
+import Card from '../components/Card.astro'
+import TimeLine from '../components/TimeLine.astro'
+
+import Carousel from '../components/Carousel'
+import Video from '../components/Video'
+---
+
+<Layout title="Welcome to Astro.">
+  <main
+    class="dark:bg-[#13151a] max-w-2xl mx-auto flex flex-col items-center gap-4 px-4 py-10"
+  >
+    <Carousel client:visible />
+
+    <!-- 	<Image
+		isBlurred
+		width={240}
+		src="https://ritzudev.netlify.app/profile.jpg"
+		alt="NextUI Album Cover"
+		className="m-5"
+		client:visible
+	/> -->
+
+    <!--     <div class="relative">
+      <img
+        class="w-60 shadow-2xl rounded-xl relative z-10"
+        src="https://ritzudev.netlify.app/profile.jpg"
+        alt=""
+      />
+      <img
+        class="w-60 shadow-2xl rounded-xl blur-lg absolute z-0 inset-0"
+        src="https://ritzudev.netlify.app/profile.jpg"
+        alt=""
+      />
+    </div> -->
+
+    <ImageBlur urlImage="https://ritzudev.netlify.app/profile.jpg" />
+
+    <h1 class="font-bold text-4xl flex items-center gap-2 dark:text-white">
+      <VerifiedIcon class="size-6 text-[#1d9bf0]" /> Dr. Olliver Núñez
+    </h1>
+
+    <Card>
+      <p class="">
+        El Dr. Olliver Núñez Cantú es Médico Cirujano Militar del Ejército y
+        Fuerza Aérea de México, graduado con Mención Honorífica. Especialista en
+        Cirugía General, formado en el Hospital Central Militar de la Ciudad de
+        México y graduado de igual manera con Mención Honorífica. Continuó su
+        preparación realizando el curso de alta especialidad en Cirugía de
+        Trauma y Cuidados Críticos Quirúrgicos en el extranjero.
+      </p>
+    </Card>
+
+    <TimeLine />
+
+    <div class="grid-cols-2 grid w-full h-60 gap-10">
+      <img
+        class="object-cover h-full rounded-md"
+        src="https://live.staticflickr.com/65535/50294559196_bb0b717f56_o.jpg"
+        alt=""
+      />
+      <img
+        class="object-cover h-full rounded-md"
+        src="https://luiseduardoyepesc.files.wordpress.com/2013/10/beauty-of-nature-random-4884759-1280-800.jpg"
+        alt=""
+      />
+      <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Nature_HD_pictures.jpg" alt=""> -->
+    </div>
+
+    <video class="flex" width="640" height="360" controls>
+      <source
+        src="https://www.w3schools.com/html/mov_bbb.mp4"
+        type="video/mp4"
+      />
+    </video>
+
+    <!-- 	<CardUI client:visible>
+		<p>
+			El Dr. Olliver Núñez Cantú es Médico Cirujano Militar del Ejército y
+			Fuerza Aérea de México, graduado con Mención Honorífica. Especialista en
+			Cirugía General, formado en el Hospital Central Militar de la Ciudad de
+			México y graduado de igual manera con Mención Honorífica. Continuó su
+			preparación realizando el curso de alta especialidad en Cirugía de
+			Trauma y Cuidados Críticos Quirúrgicos en el extranjero.
+		</p>
+	</CardUI> 
+
+	
+	<Button>Button</Button> -->
+    <!-- <Slider client:visible /> -->
+
+    <!-- <NextCard client:visible /> -->
+  </main>
+</Layout>
+
+<style>
+  /* main {
+    margin: auto;
+    padding: 1rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+  } */
+</style>
+../components/Carousel.jsx

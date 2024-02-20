@@ -1,0 +1,49 @@
+---
+import { ViewTransitions } from 'astro:transitions'
+import '@fontsource-variable/onest'
+
+interface Props {
+  title: string
+}
+
+const { title } = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <ViewTransitions />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+    <div
+      aria-hidden="true"
+      class="fixed hidden dark:md:block dark:opacity-70 -top-[80%] -right-[60%] 2xl:-top-[60%] 2xl:-right-[45%] z-0 rotate-12"
+    >
+      <img
+        src="https://nextui.org/gradients/docs-right.png"
+        class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 rounded-large"
+        alt="docs right background"
+        data-loaded="true"
+      />
+    </div>
+  </body><style is:global>
+    :root {
+      min-width: 280px;
+      color-scheme: light;
+      background-color: hsl(0% 0% 0%);
+    }
+    html {
+      font-family: 'Onest Variable', sans-serif;
+      background: #13151a;
+      background-size: 224px;
+      color-scheme: light;
+    }
+  </style>
+</html>

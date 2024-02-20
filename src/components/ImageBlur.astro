@@ -1,0 +1,46 @@
+---
+interface Props {
+  urlImage: string
+}
+
+const { urlImage } = { ...Astro.props }
+---
+
+<div class="flex h-full">
+  <div class="relative shadow-black/5 shadow-none rounded-xl w-60">
+    <img
+      src={urlImage}
+      class="relative
+      z-10
+      shadow-black
+      shadow-none
+      transition-transform-opacity
+      motion-reduce:transition-none
+      !duration-300
+      rounded-xl"
+      width="240"
+      alt="NextUI Album Cover"
+      data-loaded="true"
+    />
+    <img
+      src={urlImage}
+      class="absolute
+      z-0
+      inset-0
+      w-full
+      h-full
+      object-cover
+      filter
+      blur-lg
+      scale-105
+      saturate-150
+      opacity-30
+      translate-y-1
+      rounded-large"
+      width="240"
+      alt="NextUI Album Cover"
+      aria-hidden="true"
+      data-loaded="true"
+    />
+  </div>
+</div>
