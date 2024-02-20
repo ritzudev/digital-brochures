@@ -35,16 +35,3 @@ export default function Carousel() {
     </Swiper>
   )
 }
-
-/* 
-      <img
-        class="w-60 shadow-2xl rounded-xl relative z-10"
-        src="https://ritzudev.netlify.app/profile.jpg"
-        alt=""
-      />
-      <img
-        class="w-60 shadow-2xl rounded-xl blur-lg absolute z-0 inset-0"
-        src="https://ritzudev.netlify.app/profile.jpg"
-        alt=""
-      />
-*/

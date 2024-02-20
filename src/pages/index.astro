@@ -6,7 +6,7 @@ import Card from '../components/Card.astro'
 import TimeLine from '../components/TimeLine.astro'
 
 import Carousel from '../components/Carousel'
-import Video from '../components/Video'
+import VideoPlayer from '../components/VideoPlayer'
 ---
 
 <Layout title="Welcome to Astro.">
@@ -70,12 +70,13 @@ import Video from '../components/Video'
       <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Nature_HD_pictures.jpg" alt=""> -->
     </div>
 
-    <video class="flex" width="640" height="360" controls>
-      <source
-        src="https://www.w3schools.com/html/mov_bbb.mp4"
-        type="video/mp4"
-      />
-    </video>
+    <!-- <Player client:visible /> -->
+    <VideoPlayer client:load />
+
+    <!--     <video class="flex w-full h-full" src="/lana.mp4" controls>
+      
+      Tu navegador no admite el elemento <code>video</code>.
+    </video> -->
 
     <!-- 	<CardUI client:visible>
 		<p>

@@ -7,10 +7,5 @@ import vercelServerless from '@astrojs/vercel/serverless'
 export default defineConfig({
   integrations: [tailwind(), react()],
   output: 'server',
-  adapter: vercelServerless({
-    webAnalytics: {
-      enabled: true
-    },
-    maxDuration: 5
-  })
+  adapter: vercelServerless()
 })
