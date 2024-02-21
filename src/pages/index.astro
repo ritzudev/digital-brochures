@@ -7,14 +7,12 @@ import TimeLine from '../components/TimeLine.astro'
 
 import Carousel from '../components/Carousel'
 import VideoPlayer from '../components/VideoPlayer'
+import CardImage from '../components/CardImage.astro'
+import SocialIcons from '../components/SocialIcons.astro'
 ---
 
 <Layout title="Welcome to Astro.">
-  <main
-    class="dark:bg-[#13151a] max-w-2xl mx-auto flex flex-col items-center gap-4 px-4 py-10"
-  >
-    <Carousel client:visible />
-
+  <main class="max-w-2xl mx-auto flex flex-col items-center gap-6 px-4 py-10">
     <!-- 	<Image
 		isBlurred
 		width={240}
@@ -39,6 +37,8 @@ import VideoPlayer from '../components/VideoPlayer'
 
     <ImageBlur urlImage="https://ritzudev.netlify.app/profile.jpg" />
 
+    <SocialIcons />
+
     <h1 class="font-bold text-4xl flex items-center gap-2 dark:text-white">
       <VerifiedIcon class="size-6 text-[#1d9bf0]" /> Dr. Olliver Núñez
     </h1>
@@ -55,23 +55,25 @@ import VideoPlayer from '../components/VideoPlayer'
     </Card>
 
     <TimeLine />
+    <Carousel client:visible />
 
-    <div class="grid-cols-2 grid w-full h-60 gap-10">
-      <img
-        class="object-cover h-full rounded-md"
-        src="https://live.staticflickr.com/65535/50294559196_bb0b717f56_o.jpg"
-        alt=""
+    <div class="grid-cols-2 grid w-full gap-6">
+      <CardImage
+        title="Cirugía de mínima invasión"
+        image="https://www.newrospine.com.mx/wp-content/uploads/2020/10/cirugia_minima_invasion_3.jpg"
       />
-      <img
-        class="object-cover h-full rounded-md"
-        src="https://luiseduardoyepesc.files.wordpress.com/2013/10/beauty-of-nature-random-4884759-1280-800.jpg"
-        alt=""
+      <CardImage
+        title="Cirugía General"
+        image="https://mediterranean-healthcare.com/documents/images/20111128134031.jpg"
       />
-      <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Nature_HD_pictures.jpg" alt=""> -->
+      <CardImage
+        title="Cirugía Robotica"
+        image="https://staticnew-prod.topdoctors.mx/files/Image/large/f44d8390ecedce15a23e32c8f41b2388.jpeg"
+      />
     </div>
 
     <!-- <Player client:visible /> -->
-    <VideoPlayer client:load />
+    <VideoPlayer client:visible />
 
     <!--     <video class="flex w-full h-full" src="/lana.mp4" controls>
       
@@ -108,4 +110,3 @@ import VideoPlayer from '../components/VideoPlayer'
     line-height: 1.6;
   } */
 </style>
-../components/Carousel.jsx

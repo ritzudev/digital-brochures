@@ -10,21 +10,20 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/swiper-bundle.css'
 
 const images = [
-  'https://a.storyblok.com/f/95455/1350x1080/3ef7748922/p5240368.jpg',
-  'https://a.storyblok.com/f/95455/1350x1080/231d2407ea/p4030184.jpg',
-  'https://a.storyblok.com/f/95455/1350x1080/4aee2a00f4/p5240221.jpg'
+  'https://drollivernunez.com/wp-content/uploads/2019/06/shutterstock_1025595721-1-1024x469.jpg',
+  'https://drollivernunez.com/wp-content/uploads/2019/06/shutterstock_251399839-1024x681.jpg',
+  'https://drollivernunez.com/wp-content/uploads/2019/06/shutterstock_734373247-1024x683.jpg'
 ]
 
 export default function Carousel() {
   return (
     <Swiper
-      className="h-60 w-full"
+      className="h-72 w-full rounded-md"
       modules={[Navigation, Pagination, Scrollbar, Autoplay, A11y]}
       spaceBetween={50}
       slidesPerView={1}
       navigation
       pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
       autoplay={{ delay: 2000 }}
     >
       {images.map((image, index) => (

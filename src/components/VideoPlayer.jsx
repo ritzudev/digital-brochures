@@ -13,7 +13,8 @@ export default function VideoPlayer() {
     <div className="h-80 w-full flex">
       {isClient && (
         <YoutubePlayer
-          url="https://www.youtube.com/watch?v=dQw4w9WgXcQ" // Ejemplo de URL de YouTube, puedes cambiarlo por la URL del vídeo que deseas reproducir
+          autoPlay
+          url="https://www.youtube.com/watch?v=7zzrJSGrSiQ&pp=ygUQY2lydWppYSByb2JvdGljYQ%3D%3D" // Ejemplo de URL de YouTube, puedes cambiarlo por la URL del vídeo que deseas reproducir
           controls={true} // Agrega controles de reproducción
           width="100%" // Ajusta el ancho del reproductor
           height="100%" // Ajusta el alto del reproductor
